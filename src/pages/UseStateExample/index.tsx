@@ -31,14 +31,14 @@ export function UseStateExample() {
   const [count, setCount] = useState(0)
 
   return (
-   <CodeExample code={code}>
+  <CodeExample code={code}>
     <div>
       <h2>useState Example</h2>
       <p>This example demonstrates how to use useState to manage local state.</p>
       <p>Current count: {count}</p>
       <button onClick={() => setCount(count + 1)}>Increment</button>
     </div>
-    </CodeExample>
+  </CodeExample>
   )
   
 }
