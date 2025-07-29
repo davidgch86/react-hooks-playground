@@ -1,69 +1,85 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Hooks Playground
 
-Currently, two official plugins are available:
+This project is an educational React + TypeScript + Vite playground that demonstrates the most commonly used React Hooks, including:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Built-in React Hooks (basic to advanced)
+- Custom reusable Hooks (like `useLocalStorage`, `useToggle`, `useWindowSize`, etc.)
+- Combined hook usage in real scenarios
+- Side-by-side live demos with syntax-highlighted source code
 
-## Expanding the ESLint configuration
+This project is ideal for learning and serving as a reference for real-world usage.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- React 18+
+- TypeScript
+- Vite
+- React Router (optional for route-based navigation)
+- Custom styling (vanilla CSS)
+- `react-syntax-highlighter` for in-browser code preview
+- ESLint with type-aware configuration
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Folder Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+src/
+
+│
+
+├── components/           # Shared components (e.g. CodeExample)
+
+├── hooks/                # Custom hooks (e.g. useLocalStorage.ts)
+
+├── pages/                # One file per hook example
+
+│   ├── UseStateExample/
+
+│   ├── UseEffectExample/
+
+│   ├── UseContextExample/
+
+│   ├── UseRefExample/
+
+│   ├── UseMemoExample/
+
+│   ├── UseCallbackExample/
+
+│   ├── UseReducerExample/
+
+│   ├── UseLayoutEffectExample/
+
+│   ├── UseImperativeHandleExample/
+
+│   ├── UseTransitionExample/
+
+│   ├── UseIdExample/
+
+│   ├── CombinedHooksExample/
+
+│   └── CustomHookExample/
+
+│
+
+├── App.tsx               # Main navigation menu
+
+├── main.tsx              # Vite entry point
+
+├── index.css             # Global styles
+
+└── ...
+
+
+---
+## Getting Started
+
+To run the project locally:
+
+```bash
+npm install
+npm run dev
+---
